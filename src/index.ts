@@ -10,28 +10,8 @@ import "@awesome.me/webawesome/dist/components/tag/tag.js"
 import "@awesome.me/webawesome/dist/components/divider/divider.js"
 import "@awesome.me/webawesome/dist/components/avatar/avatar.js"
 
-// import "../fixtures/my-element.js"
-
 export async function render() {
-    let elementPaths = Config.get("elementPaths")
-    let elementImports: string[] = []
-    if (elementPaths) {
-        let imports = []
-        try {
-            imports = JSON.parse(elementPaths)
-        } catch (_e) {
-            console.error("Improper elementPaths provided")
-        }
-        if (Array.isArray(imports)) {
-            elementImports = elementImports.concat(imports)
-        }
-    }
-
     const input = JSON.parse(Host.inputString())
-
-    if (Array.isArray(input.elementPaths)) {
-        elementImports = elementImports.concat(input.elementPaths)
-    }
 
     const templ = ssrRender(unsafeHTML(input.content))
     const result = await collectResult(templ)

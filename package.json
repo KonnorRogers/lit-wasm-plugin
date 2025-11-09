@@ -1,16 +1,20 @@
 {
-  "name": "js-pdk-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.ts",
+  "name": "lit-wasm-plugin",
+  "version": "0.0.1",
+  "description": "An experiment with Extism + Lit for SSR",
+  "main": "dist/index.js",
   "scripts": {
     "setup": "curl -s https://get.extism.org/cli | sh && curl -s https://raw.githubusercontent.com/extism/js-pdk/main/install.sh | sh",
     "build:check": "tsc --noEmit && node esbuild.js && extism-js dist/index.js -i src/index.d.ts -o dist/plugin.wasm",
     "build": "node esbuild.js && extism-js dist/index.js -i src/index.d.ts -o dist/plugin.wasm"
   },
-  "keywords": [],
-  "author": "",
-  "license": "BSD-3-Clause",
+  "keywords": [
+    "lit",
+    "ssr",
+    "webcomponents"
+  ],
+  "author": "KonnorRogers <konnor5456@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@extism/js-pdk": "^1.0.1",
