@@ -2,7 +2,7 @@ import {render as ssrRender} from '@lit-labs/ssr/lib/render';
 import {collectResult} from '@lit-labs/ssr/lib/render-result.js';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
 
-async function render() {
+export async function render() {
     let elementPaths = Config.get("elementPaths")
     let elementImports: string[] = []
     if (elementPaths) {
@@ -30,8 +30,4 @@ async function render() {
     const templ = ssrRender(unsafeHTML(input.content))
     const result = await collectResult(templ)
     Host.outputString(result)
-}
-
-module.exports = {
-    render
 }
