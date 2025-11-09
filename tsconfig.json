@@ -19,7 +19,8 @@
     "noEmit": true // Do not emit outputs (no .js or .d.ts files)
   },
   "include": [
-    "src/**/*.ts" // Include all TypeScript files in src directory
+    "src/**/*.ts", // Include all TypeScript files in src directory
+    "fixtures/**/*.ts" // Include all TypeScript files in fixtures directory
   ],
   "exclude": [
     "node_modules" // Exclude the node_modules directory
