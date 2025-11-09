@@ -8,10 +8,14 @@ export class MyElement extends LitElement {
     }
 
     static {
-        (globalThis as any).customElements.define("my-element", this)
+        globalThis.customElements.define("my-element", this)
     }
 
-    name: string = ""
+    constructor () {
+        super()
+        this.name = "foo"
+    }
+
 
     render () {
         return html`<div>Hello ${this.name}</div>`
