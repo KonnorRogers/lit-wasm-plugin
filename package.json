@@ -6,7 +6,7 @@
   "scripts": {
     "install:extism": "curl -s https://get.extism.org/cli | sh && curl -s https://raw.githubusercontent.com/extism/js-pdk/main/install.sh | sh",
     "install:webawesome": "git submodule update --init --recursive && cd webawesome && git checkout konnorrogers/working-on-ssr && npm install && npm run build && cd -",
-    "bootstrap": "npm run install:extism && npm run install:webawesome && npm install",
+    "bootstrap": "(command -v extism-js || npm run install:extism) && npm run install:webawesome && npm install",
     "build:check": "tsc --noEmit && node esbuild.js && extism-js dist/index.js -i src/index.d.ts -o dist/plugin.wasm",
     "build": "node esbuild.js && extism-js dist/index.js -i src/index.d.ts -o dist/plugin.wasm"
   },
