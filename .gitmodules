@@ -1,0 +1,3 @@
+[submodule "webawesome"]
+	path = webawesome
+	url = https://github.com/shoelace-style/webawesome

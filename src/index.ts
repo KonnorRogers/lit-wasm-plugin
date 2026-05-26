@@ -93,7 +93,6 @@ import "@awesome.me/webawesome/dist/components/carousel-item/carousel-item.js"
 import "@awesome.me/webawesome/dist/components/carousel/carousel.js"
 import "@awesome.me/webawesome/dist/components/checkbox/checkbox.js"
 import "@awesome.me/webawesome/dist/components/color-picker/color-picker.js"
-import "@awesome.me/webawesome/dist/components/combobox/combobox.js"
 import "@awesome.me/webawesome/dist/components/comparison/comparison.js"
 import "@awesome.me/webawesome/dist/components/copy-button/copy-button.js"
 import "@awesome.me/webawesome/dist/components/details/details.js"
@@ -102,7 +101,6 @@ import "@awesome.me/webawesome/dist/components/divider/divider.js"
 import "@awesome.me/webawesome/dist/components/drawer/drawer.js"
 import "@awesome.me/webawesome/dist/components/dropdown-item/dropdown-item.js"
 import "@awesome.me/webawesome/dist/components/dropdown/dropdown.js"
-import "@awesome.me/webawesome/dist/components/file-input/file-input.js"
 import "@awesome.me/webawesome/dist/components/format-bytes/format-bytes.js"
 import "@awesome.me/webawesome/dist/components/format-date/format-date.js"
 import "@awesome.me/webawesome/dist/components/format-number/format-number.js"
@@ -141,6 +139,7 @@ import "@awesome.me/webawesome/dist/components/tooltip/tooltip.js"
 import "@awesome.me/webawesome/dist/components/tree-item/tree-item.js"
 import "@awesome.me/webawesome/dist/components/tree/tree.js"
 import "@awesome.me/webawesome/dist/components/zoomable-frame/zoomable-frame.js"
+
 
 export function render() {
     const input = JSON.parse(Host.inputString())
